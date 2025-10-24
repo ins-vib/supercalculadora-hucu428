@@ -4,7 +4,6 @@ package org.yourcompany.calculadora;
  *
  * @author Hugo Cuadrado
  */
-import java.util.Random;
 
 
 public class Calculadora {
@@ -105,7 +104,7 @@ public class Calculadora {
         }
         return factorial;
     }
-    */
+    
     public static int numeroCares(int repeticions) {
         Random rand = new Random();
 
@@ -139,6 +138,7 @@ public class Calculadora {
         }
         return creus;
     }
+    */
     public static double preucinema(double preuL, boolean cap_de_setmana, boolean jove) {
   
        double descompteC = 0.1;
