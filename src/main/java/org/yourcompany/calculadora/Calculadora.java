@@ -1,25 +1,38 @@
 package org.yourcompany.calculadora;
 
-/**
- *
- * @author Hugo Cuadrado
- */
 import java.util.Scanner;
 
+/**
+ * Classe Calculadora.
+ * Proporciona funcionalitats per:
+ * <ul>
+ *   <li>Comptar dígits d'un nombre</li>
+ *   <li>Sumar els primers N números</li>
+ *   <li>Calcular factorials</li>
+ *   <li>Sumar quadrats dels primers N números</li>
+ *   <li>Calcular potències</li>
+ * </ul>
+ * Autor: Hugo Cuadrado
+ */
 public class Calculadora {
+
+    /** Scanner estàtic per llegir entrades de consola. */
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static void mostrarMenuConsola() {
-        System.out.println("Menú de la Calculadora:");
-        System.out.println("0. Sortir");
-        System.out.println("1. Nombre de dígits d'un nombre");
-        System.out.println("2. Suma dels primers N números");
-        System.out.println("3. Calcular factorial d'un nombre");
-        System.out.println("4. Suma dels quadrats dels primers N números");
-        System.out.println("5. Calcular potència");
-        System.out.println("Seleccioneu una opció (0-5):");
+    /**
+     * Constructor per defecte de la classe Calculadora.
+     */
+    public Calculadora() {
+        // Constructor buit
     }
 
+    /**
+     * Punt d'entrada de l'aplicació.
+     * Mostra un menú per seleccionar diferents operacions de la calculadora
+     * i processa la selecció de l'usuari fins que tria sortir.
+     *
+     * @param args Arguments de la línia de comandes (no utilitzats)
+     */
     public static void main(String[] args) {
         int opcio;
         do {
@@ -70,6 +83,20 @@ public class Calculadora {
                 default -> System.out.println("Opció no vàlida. Seleccioneu 0-5.");
             }
         } while (opcio != 0);
+    }
+
+    /**
+     * Mostra el menú principal de la calculadora per consola.
+     */
+    public static void mostrarMenuConsola() {
+        System.out.println("Menú de la Calculadora:");
+        System.out.println("0. Sortir");
+        System.out.println("1. Nombre de dígits d'un nombre");
+        System.out.println("2. Suma dels primers N números");
+        System.out.println("3. Calcular factorial d'un nombre");
+        System.out.println("4. Suma dels quadrats dels primers N números");
+        System.out.println("5. Calcular potència");
+        System.out.println("Seleccioneu una opció (0-5):");
     }
 
     /**
