@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Calculadora {
     private static final Scanner scanner = new Scanner(System.in);
 
- public static void mostrarMenuConsola() {
+    public static void mostrarMenuConsola() {
         System.out.println("Menú de la Calculadora:");
         System.out.println("0. Sortir");
         System.out.println("1. Nombre de dígits d'un nombre");
@@ -18,17 +18,16 @@ public class Calculadora {
         System.out.println("4. Suma dels quadrats dels primers N números");
         System.out.println("5. Calcular potència");
         System.out.println("Seleccioneu una opció (0-5):");
-     
- }
+    }
+
     public static void main(String[] args) {
         int opcio;
         do {
             mostrarMenuConsola();
-            // llegir opció i validar entrada bàsica
             if (!scanner.hasNextInt()) {
                 System.out.println("Entrada no vàlida. Introdueix un nombre.");
-                scanner.next(); // descartar entrada no vàlida
-                opcio = -1; // assignar valor per continuar el bucle
+                scanner.next();
+                opcio = -1;
                 continue;
             }
             opcio = scanner.nextInt();
@@ -83,8 +82,8 @@ public class Calculadora {
      */
     public static int nombreDigits(int nombre) {
         if (nombre == 0) {
-            return 1; // el 0 té un dígit
-        }        
+            return 1;
+        }
         int comptador = 0;
         while (nombre != 0) {
             nombre /= 10;
@@ -93,8 +92,15 @@ public class Calculadora {
         return comptador;
     }
 
+    /**
+     * Calcula la suma dels primers N números naturals.
+     * Si N és negatiu, llença una excepció.
+     *
+     * @param n Quantitat de números a sumar
+     * @return Suma des de 1 fins a N
+     * @throws IllegalArgumentException si {@code n} és negatiu
+     */
     public static int sumaPrimersNumeros(int n) {
-        // Implementa aquest mètode
         if (n < 0) {
             throw new IllegalArgumentException("El nombre ha de ser no negatiu");
         }
@@ -105,8 +111,15 @@ public class Calculadora {
         return suma;
     }
 
+    /**
+     * Calcula el factorial d’un nombre enter no negatiu.
+     * El factorial de 0 és 1.
+     *
+     * @param num Nombre del qual es vol calcular el factorial
+     * @return Valor de {@code num!}
+     * @throws IllegalArgumentException si {@code num} és negatiu
+     */
     public static int calcularFactorial(int num) {
-        // Implementa aquest mètode
         if (num < 0) {
             throw new IllegalArgumentException("El nombre ha de ser no negatiu");
         }
@@ -117,8 +130,15 @@ public class Calculadora {
         return factorial;
     }
 
+    /**
+     * Calcula la suma dels quadrats dels primers M números.
+     * Exemple: per M = 3 → 1² + 2² + 3² = 14.
+     *
+     * @param m Quantitat de quadrats a sumar
+     * @return Suma dels quadrats de 1 fins a M
+     * @throws IllegalArgumentException si {@code m} és negatiu
+     */
     public static int sumaQuadrats(int m) {
-        // Implementa aquest mètode
         if (m < 0) {
             throw new IllegalArgumentException("El nombre ha de ser no negatiu");
         }
@@ -128,9 +148,17 @@ public class Calculadora {
         }
         return suma;
     }
-    
-   public static int calcularPotencia(int base, int exponent) {
-        // Implementa aquest mètode
+
+    /**
+     * Calcula la potència d’una base elevada a un exponent enter no negatiu.
+     * Exemple: base=2, exponent=3 → 2³ = 8.
+     *
+     * @param base Valor base
+     * @param exponent Exponent (ha de ser no negatiu)
+     * @return Resultat de {@code base^exponent}
+     * @throws IllegalArgumentException si l’exponent és negatiu
+     */
+    public static int calcularPotencia(int base, int exponent) {
         if (exponent < 0) {
             throw new IllegalArgumentException("L'exponent ha de ser no negatiu");
         }
@@ -140,16 +168,4 @@ public class Calculadora {
         }
         return resultat;
     }
-
-
-
-    
 }
-
-
-
-
-
-
-
-
