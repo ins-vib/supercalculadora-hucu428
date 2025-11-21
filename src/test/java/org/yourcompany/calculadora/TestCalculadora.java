@@ -18,5 +18,24 @@ public class TestCalculadora {
         assertEquals(0, Calculadora.sumaPrimersNumeros(0));
         assertEquals(6, Calculadora.sumaPrimersNumeros(3));
     }
+    @Test
+    public void test3() {
+        assertEquals(120, Calculadora.calcularFactorial(5));
+        assertEquals(1, Calculadora.calcularFactorial(0));
+        assertEquals(1, Calculadora.calcularFactorial(1));
+        assertEquals(3628800, Calculadora.calcularFactorial(10));
+    }
+    @Test
+    public void test4() {
+        assertEquals(385, Calculadora.sumaQuadrats(10));
+        assertEquals(1, Calculadora.sumaQuadrats(1));
+        assertEquals(0, Calculadora.sumaQuadrats(0));       
+    }
+    @Test
+    public void test5() {
+        assertEquals(32, Calculadora.calcularPotencia(2, 5));
+        assertEquals(1, Calculadora.calcularPotencia(2, 0));
+        assertEquals(27, Calculadora.calcularPotencia(3, 3));   
+    }
     }
 
