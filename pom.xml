@@ -9,7 +9,9 @@
         <maven.compiler.release>21</maven.compiler.release>
         <exec.mainClass>org.yourcompany.calculadora.Calculadora</exec.mainClass>
     </properties>
-    <dependencies>
+
+    
+     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -17,4 +19,5 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+   
 </project>
